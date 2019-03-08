@@ -1,5 +1,6 @@
 package com.wayfair.datanalytics.utils;
 
+import java.io.File;
 import java.time.LocalDateTime;
 import java.time.Month;
 import java.time.format.DateTimeFormatter;
@@ -13,5 +14,16 @@ public class Utils {
 
 	public static Month getMonth(String data) {
 		return LocalDateTime.parse(data, formatter).getMonth();
+	}
+	
+	public static boolean validateFile(String filePath) {
+		try {
+			File f = new File(filePath);
+			return f.exists() && !f.isDirectory();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return false;
 	}
 }

@@ -5,5 +5,5 @@ import java.util.List;
 import com.wayfair.datanalytics.model.SaleData;
 
 public interface IAnalyticsDao {
-	List<SaleData> loadData();
+	List<SaleData> loadData(String pathDataSet1,String pathDataSet2);
 }

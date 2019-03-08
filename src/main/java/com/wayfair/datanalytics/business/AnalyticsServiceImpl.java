@@ -23,10 +23,10 @@ public class AnalyticsServiceImpl implements IAnalyticService {
 	 * and nps ration which is (pp/nps). 
 	 */
 	@Override
-	public List<Sale> getProductsWithToScore(int n) {
+	public List<Sale> getProductsWithToScore(int n,String pathDataSet1,String pathDataSet2) {
 
 		List<Sale> topProd = new ArrayList<>();
-		List<SaleData> data = dao.loadData();
+		List<SaleData> data = dao.loadData(pathDataSet1,pathDataSet2);
 		for (SaleData dataItem : data) {
 			Map<Month, Integer> salesCount = dataItem.getProductIdsAndSaleDateMap();
 			Integer numberOfSalesInPeakPeriod = 0;
@@ -42,7 +42,7 @@ public class AnalyticsServiceImpl implements IAnalyticService {
 			topProd.add(new Sale(dataItem.getProductType(), numberOfSalesInPeakPeriod, numberOfSalesInNonPeakPeriod));
 		}
 		Collections.sort(topProd);//Sorting in ascending order based on Compare
-		n=n%topProd.size();//in case n is bigger than number of sales
+		n=n>topProd.size()?n%topProd.size():n;//in case n is bigger than number of sales
 		return topProd.subList(0, n);
 	}
 
