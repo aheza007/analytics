@@ -15,7 +15,7 @@ To run it you will have to follow below instructions
     <li> download/clone this projoct code</li>
     <li> navigate to the directory containing this project</li>
     <li> run this command <b>mvn clean compile assembly:single</b></li>
-    <li> after the build is success run this command <b>java -jar target/datanalytics-0.0.1-SNAPSHOT-jar-with-dependencies.jar</b></li>
+    <li> after the build is success run this command <b>java -jar target/datanalytics-0.0.1-SNAPSHOT-jar-with-dependencies.jar <i>pathToFile1</i> <i>pathToFile2</i></b></li>
     <li> a list of the five product types with the best peak / non-peak sales ratio will be printed</li>
   </ol>
 
