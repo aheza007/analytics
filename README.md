@@ -24,9 +24,11 @@ To run it you will have to follow below instructions
 Below are the things, that i think i should have done on this project:
 <ul>
   <li> Using concurrence to load and read data Synchronously</li>
+  <li> I need to come up with a good design to how to process different file formats. Thinking of writting a Factory that will provide a file processor given a file format for example </li>
   <li> Store data in a database</li>
   <li> Use Spring boot so that i can leverage its cool features like dependencies injection via autowiring, and database access</li>
   <li> Build cool User interface that can facilitate to filter by dates, add number of items to return, show statistical graphs..</li>
   <li> Write good unit tests</li>
   <li> Use a good Logger api</li>
+  
 </ul>
