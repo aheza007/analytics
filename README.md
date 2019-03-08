@@ -28,4 +28,5 @@ Below are the things, that i think i should have done on this project:
   <li> Use Spring boot so that i can leverage its cool features like dependencies injection via autowiring, and database access</li>
   <li> Build cool User interface that can facilitate to filter by dates, add number of items to return, show statistical graphs..</li>
   <li> Write good unit tests</li>
+  <li> Use a good Logger api</li>
 </ul>
